@@ -13,6 +13,7 @@ return {
 					"lua_ls",
 					"clangd",
 					"tsserver",
+                    "pyright"
 				},
 			})
 		end,
@@ -26,6 +27,9 @@ return {
 				cabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
+				cabilities = capabilities,
+			})
+            lspconfig.pyright.setup({
 				cabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
